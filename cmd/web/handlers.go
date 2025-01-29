@@ -14,6 +14,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 	files := []string{
 		`D:\web_dev\go\snippetbox\ui\html\base.tmpl.html`,
 		`D:\web_dev\go\snippetbox\ui\html\pages\home.tmpl.html`,
+		`D:\web_dev\go\snippetbox\ui\html\partials\nav.tmpl.html`,
 	}
 	ts, err := template.ParseFiles(files...)
 	if err != nil {
