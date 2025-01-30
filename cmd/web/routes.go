@@ -6,7 +6,7 @@ import (
 
 func (app *application) routes() *http.ServeMux {
 	mux := http.NewServeMux()
-	fileServer := http.FileServer(neuteredFileSystem{http.Dir(`D:\web_dev\go\snippetbox\ui\static\`)})
+	fileServer := http.FileServer(neuteredFileSystem{fs: http.Dir(`D:\web_dev\go\snippetbox\ui\static\`)})
 
 	mux.Handle("GET /static/", http.StripPrefix("/static", fileServer))
 
